@@ -1,6 +1,6 @@
 # Real-Time Two-Way ASL Translator on Raspberry Pi 5
 
-A proof-of-concept wearable system that enables two-way communication between ASL (American Sign Language) users and non-signers. The system runs entirely on a Raspberry Pi 5 and supports two modes: **Sign-to-Speech** (camera captures signs → LSTM classifies → audio output) and **Speech-to-Text** (microphone captures speech → speech recognition transcribes → text on display).
+A proof-of-concept wearable system that enables two-way communication between ASL (American Sign Language) users and non-signers. The system runs entirely on a Raspberry Pi 5 and supports two modes: **Sign-to-Speech** (camera captures signs → CNN classifies → audio output) and **Speech-to-Text** (microphone captures speech → speech recognition transcribes → text on display).
 
 > **Course:** Edge AI (2025)
 
@@ -31,7 +31,7 @@ A proof-of-concept wearable system that enables two-way communication between AS
 
 Communication between ASL users and non-signers remains a significant barrier in everyday interactions. This project implements a real-time, portable, two-way ASL translator that runs on edge hardware (Raspberry Pi 5), requiring no cloud connectivity for sign language inference.
 
-The system recognizes **19 common ASL signs** from a live camera feed using MediaPipe hand/pose landmarks and an LSTM classifier, then speaks the detected word aloud via a Bluetooth speaker. In the reverse direction, it captures spoken English via a Bluetooth microphone, transcribes it using Google Speech Recognition, and displays the text on an attached touchscreen — enabling bidirectional conversation.
+The system recognizes **19 common ASL signs** from a live camera feed using MediaPipe hand/pose landmarks and a CNN classifier, then speaks the detected word aloud via a Bluetooth speaker. In the reverse direction, it captures spoken English via a Bluetooth microphone, transcribes it using Google Speech Recognition, and displays the text on an attached touchscreen — enabling bidirectional conversation.
 
 ---
 
@@ -54,7 +54,7 @@ The system recognizes **19 common ASL signs** from a live camera feed using Medi
 │                                                                  │
 │  ┌─── SIGN-TO-SPEECH (Speaker Mode) ───────────────────────┐    │
 │  │                                                          │    │
-│  │  Pi Camera ──► MediaPipe ──► Feature ──► LSTM ──► TTS   │    │
+│  │  Pi Camera ──► MediaPipe ──► Feature ──► CNN ──► TTS   │    │
 │  │  (640×480)     Holistic     Extraction   (TFLite)  espeak│    │
 │  │                (Pose+Hands) (252+vel)              -ng   │    │
 │  │                                                          │    │
@@ -82,7 +82,7 @@ The system recognizes **19 common ASL signs** from a live camera feed using Medi
 3. **Feature engineering:** Raw landmarks are transformed into a 252-dimensional engineered feature vector per frame (wrist-normalized coordinates, fingertip distances, palm normals, inter-hand distance, pose context).
 4. **Velocity stacking:** Frame-to-frame differences (velocity) are computed and concatenated, yielding **504 features per frame**.
 5. **Sequence buffering:** A sliding window of 30 frames with 15-frame overlap is maintained in a deque.
-6. **Inference:** The (30, 504) sequence tensor is fed to a TFLite LSTM model running on a dedicated inference thread. If confidence exceeds **85%**, the sign is classified.
+6. **Inference:** The (30, 504) sequence tensor is fed to a TFLite CNN model running on a dedicated inference thread. If confidence exceeds **85%**, the sign is classified.
 7. **TTS output:** `espeak-ng` speaks the detected word aloud via the Bluetooth speaker, with a 2-second cooldown to prevent repetitive speech.
 
 ### Speech-to-Text Pipeline
@@ -368,7 +368,6 @@ The Tkinter GUI is designed for the Pi's touchscreen and provides:
 - **Sentence construction:** Combine sequential sign detections into grammatically correct English sentences using a lightweight language model.
 - **Wearable form factor:** Migrate to a smaller SBC or custom PCB with a head-mounted or chest-mounted camera.
 - **Continuous learning:** Allow users to add custom signs via few-shot on-device fine-tuning.
-- **Transformer architecture:** Explore lightweight temporal transformer architectures as an alternative to LSTM.
 
 ---
 
