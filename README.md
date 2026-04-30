@@ -512,6 +512,6 @@ Realtime_ASL_RasPi/
 
 ## Video Presentation
 
-  <video src="Demo_RasPi/ASL_RasPi_Demo.mp4" controls="controls" width="100%">
+<video src="https://raw.githubusercontent.com/prayanshus/Realtime_ASL_RasPi/main/Demo_RasPi/ASL_RasPi_Demo.mp4" controls="controls" width="100%">
     Your browser does not support the video tag.
   </video>
