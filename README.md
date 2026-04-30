@@ -124,8 +124,8 @@ Data was collected **directly on the Raspberry Pi** using the custom `data_captu
 **Collection details:**
 
 - **19 ASL signs** (common conversational words)
-- **60 video clips per sign**, each 30 frames long (~1–2 seconds)
-- **Total:** 1,140 video clips
+- **180 video clips per sign**, each 30 frames long (~1–2 seconds)
+- **Total:** 3,420 video clips
 - **Resolution:** 640×480 at 30 FPS
 - **Format:** `.mp4` raw video → `.npy` extracted feature sequences
 
