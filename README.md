@@ -353,12 +353,11 @@ The Tkinter GUI is designed for the Pi's touchscreen and provides:
 
 ## 12. Challenges and Learnings
 
-- **Visually similar signs:** "Hello" and "bye" in ASL are nearly identical gestures. Solution: replaced "bye" with "sorry," which has a distinct chest-circling motion.
 - **Domain gap:** Models trained on laptop webcam data performed poorly on the Pi's camera. Solution: collected all training data directly on the Pi to match the deployment camera.
 - **MediaPipe compute cost:** MediaPipe Holistic (pose + hands) is heavy for the Pi's CPU. Solution: process MediaPipe every 2nd frame and reuse cached results, cutting compute by ~50%.
 - **Bluetooth audio latency:** Bluetooth adds ~100–200 ms latency. `espeak-ng` was chosen for fast synthesis to minimize total end-to-end delay.
-- **Thread coordination:** Four concurrent threads (GUI, inference, TTS, STT) required careful queue management, daemon flags, and explicit shutdown sequencing to avoid hangs.
 - **Wrist normalization:** Normalizing hand landmarks relative to the wrist and scaling by hand size made the model robust to varying camera distances and hand sizes.
+- **Speech to text** Initially planned to implement knowledge distillation on OpenAI's Whisper model, but deferred this to future iterations due to current resource constraints and extended training times.
 
 ---
 
@@ -406,18 +405,6 @@ pip3 install mediapipe numpy opencv-python Pillow \
 ```
 
 ### Step 4: Pair Bluetooth Audio (if using Bluetooth speaker/mic)
-
-```bash
-bluetoothctl
-# Inside the interactive shell:
-power on
-agent on
-scan on
-# Wait for your device to appear, then:
-pair <MAC_ADDRESS>
-connect <MAC_ADDRESS>
-trust <MAC_ADDRESS>
-quit
 ```
 
 ### Step 5: Run the Two-Way Translator
@@ -508,8 +495,7 @@ Realtime_ASL_RasPi/
 
 ### AI Tools Disclosure
 
-<!-- TODO: Update this with the AI tools you actually used -->
-> [Describe any AI code generation tools used and which parts of the project they assisted with. For example: "GitHub Copilot was used for boilerplate Tkinter GUI layout. Claude was used to generate the README documentation. All model architecture decisions, feature engineering, and system design were done manually."]
+> GitHub Copilot was used for boilerplate Tkinter GUI layout. Claude was used to generate the README documentation. All model architecture decisions, feature engineering, and system design were done manually."
 
 ---
 
@@ -526,5 +512,6 @@ Realtime_ASL_RasPi/
 
 ## Video Presentation
 
-<!-- TODO: Add your video link -->
-<!-- [Watch the project presentation](https://youtube.com/...) -->
+  <video src="Demo_RasPi/ASL_RasPi_Demo.mp4" controls="controls" width="100%">
+    Your browser does not support the video tag.
+  </video>
