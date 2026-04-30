@@ -311,8 +311,8 @@ The Tkinter GUI is designed for the Pi's touchscreen and provides:
 - **Live camera feed** (640×480 canvas) with overlaid MediaPipe pose and hand skeleton drawings.
 - **Transcript box** — large text area (22pt bold font) showing the currently detected sign or transcribed speech.
 - **Mode toggle button** — switches between:
-  - 🎤 **Speaker mode:** Camera active → sign recognition → spoken audio output
-  - 📷 **Listener mode:** Microphone active → speech recognition → text display
+  -    **Speaker mode:** Camera active → sign recognition → spoken audio output
+  -    **Listener mode:** Microphone active → speech recognition → text display
 - **Model selector** — FP32 / INT8 radio buttons to swap TFLite models at runtime.
 - **Performance metrics** — real-time FPS and end-to-end inference latency (ms).
 - **Status bar** — shows detection confidence, hand tracking state, and current mode.
