@@ -142,9 +142,9 @@ The script provides on-screen instructions for each sign, a countdown timer, pro
 | thank you | Hand from chin moves forward |
 | water | W-shape (3 fingers up) taps chin |
 | more | Fingertips tap together (two hands) |
-| home | Pinched hand taps cheek twice |
-| good | Hand from chin moves down |
-| bad | Hand from chin flips outward |
+| home | Home symbol using both arms |
+| good | Thumbs up sign |
+| bad | Thumbs down sign |
 | come | Index finger curls inward |
 | go | Index finger points outward |
 | stop | Flat hand chops onto other palm |
@@ -508,6 +508,4 @@ Realtime_ASL_RasPi/
 
 ## Video Presentation
 
-<video src="https://raw.githubusercontent.com/prayanshus/Realtime_ASL_RasPi/main/Demo_RasPi/ASL_RasPi_Demo.mp4" controls="controls" width="100%">
-    Your browser does not support the video tag.
-  </video>
+In the folder **Demo_RasPi**
