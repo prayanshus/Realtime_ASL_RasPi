@@ -153,9 +153,6 @@ The script provides on-screen instructions for each sign, a countdown timer, pro
 | food | Pinched fingers tap mouth |
 | want | Claw hands pull toward body |
 | help | Thumbs-up lifted by other palm |
-| sorry | Fist circles on chest |
-
-> **Note:** "Bye" was removed from the original set because its gesture is nearly identical to "hello" in ASL. "Sorry" was added as a visually distinct replacement.
 
 ### Downloading the Pre-Collected Dataset
 
