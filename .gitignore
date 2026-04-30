@@ -1,0 +1,7 @@
+Video_Data/
+Processed_Video_Data/
+Extracted_Features/
+nas_dir/
+logs/
+*.mp4
+*.npy
