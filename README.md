@@ -493,6 +493,7 @@ Realtime_ASL_RasPi/
 ## Team Members
 
 List of team members, affiliation, email, individual contribution:
+|---|---|
 Name					|Affiliation|		Email			|		Contribution
 1. Liz Maria George 	| *			|lizgeorge@iisc.ac.in	|Dataset collection, cleanup, feature engineering
 2. Naznin Amirul Haque	| *			|nazninhaque@iisc.ac.in	|Dataset collection, cleanup, feature engineering
