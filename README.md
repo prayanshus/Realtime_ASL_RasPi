@@ -317,34 +317,29 @@ The Tkinter GUI is designed for the Pi's touchscreen and provides:
 - **Performance metrics** — real-time FPS and end-to-end inference latency (ms).
 - **Status bar** — shows detection confidence, hand tracking state, and current mode.
 
-<!-- TODO: Add a screenshot of the GUI -->
-<!-- ![GUI Screenshot](images/gui_screenshot.png) -->
-
 ---
 
 ## 11. Results and Performance
 
 ### Model Performance
 
-<!-- TODO: Replace XX with your actual numbers from training -->
 
 | Metric | Value |
 |---|---|
-| K-Fold Cross-Validation Accuracy (mean ± std) | ~XX% ± X% |
-| Held-out Test Accuracy | ~XX% |
 | Number of Classes | 19 |
 | Confidence Threshold for Detection | 85% |
+| End-to-End Inference Latency | ~0.5 ms | ~0.5 ms |
+| GUI Frame Rate | ~20-30 FPS | ~20-30 FPS |
 
 ### Runtime Performance on Raspberry Pi 5
 
 | Metric | FP32 Model | INT8 Model |
 |---|---|---|
 | Model File Size | 628 KB | 163 KB |
-| End-to-End Inference Latency | ~XX ms | ~XX ms |
-| GUI Frame Rate | ~XX FPS | ~XX FPS |
+| Total Tensor RAM | 771.9 KB | 252.5 KB |
+| x86 inference latency | 0.082ms | 0.023 ms |
+| Test Accuracy | 99.12% | 99.12% |
 
-<!-- TODO: Add demo screenshots or GIFs -->
-<!-- ![Working Demo](images/demo.gif) -->
 
 ---
 
@@ -497,12 +492,14 @@ Realtime_ASL_RasPi/
 
 ## Team Members
 
-<!-- TODO: Fill in your actual team details -->
+List of team members, affiliation, email, individual contribution:
+Name					|Affiliation|		Email			|		Contribution
+1. Liz Maria George 	| *			|lizgeorge@iisc.ac.in	|Dataset collection, cleanup, feature engineering
+2. Naznin Amirul Haque	| *			|nazninhaque@iisc.ac.in	|Dataset collection, cleanup, feature engineering
+3. Ayush Kumar			| *			|ayush1@iisc.ac.in		|Top level integration, GUI development, Data collection GUI
+4. Prayanshu Sharma		| *			|prayanshus@iisc.ac.in	|Dataset collection, model development
 
-| Name | Affiliation | Email | Contributions |
-|---|---|---|---|
-| [Member 1] | [University] | [email] | [e.g., Data collection, model training, feature engineering] |
-| [Member 2] | [University] | [email] | [e.g., Pi deployment, GUI development, hardware integration] |
+*M.Tech. (MVLSI), ECE, IISc
 
 ---
 
