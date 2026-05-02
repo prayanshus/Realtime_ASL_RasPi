@@ -41,6 +41,8 @@ The Sign-to-Speech pipeline recognises **19 ASL signs** using MediaPipe landmark
 │  SHARED: Tkinter GUI │ Threaded workers │ Mode toggle    │
 └──────────────────────────────────────────────────────────┘
 ```
+![System_Architecture](ASL_TopLevel.png) 
+> 📷 *Figure 1: Top level system architecture*
 
 ### Sign-to-Speech: Step-by-Step
 
@@ -80,8 +82,7 @@ Main Thread (Tkinter loop, 15 ms tick)
 | Audio I/O | Sony SRS-XB12 (BT speaker + mic) |
 | OS | Raspberry Pi OS Bookworm 64-bit |
 
-<!-- ![Hardware Setup](images/hardware_setup.jpg) -->
-> 📷 *Figure 1: Hardware assembly — Pi 5 + touchscreen + ribbon camera + BT speaker*
+
 
 ---
 
@@ -154,7 +155,7 @@ Best NAS architecture trained for 100 epochs × 5 folds → mean val accuracy + 
 
 Best scheduler → final exported model.
 
-<!-- ![Confusion Matrix](images/confusion_matrix.png) -->
+![Confusion Matrix](ASL_ConfMat.png) 
 > 📷 *Figure 4: Confusion matrix on held-out test set (19 classes)*
 
 ---
@@ -198,10 +199,10 @@ Tkinter GUI designed for touchscreen:
 - **Real-time metrics** — FPS + end-to-end inference latency (ms)
 - **Status bar** — confidence score, hand tracking state, current mode
 
-<!-- ![GUI Screenshot - Speaker Mode](images/gui_speaker.png) -->
+![GUI Screenshot - Speaker Mode](ASL_GUI_1.png) 
 > 📷 *Figure 5: GUI in Speaker mode — live skeleton overlay + detected sign*
 
-<!-- ![GUI Screenshot - Listener Mode](images/gui_listener.png) -->
+![GUI Screenshot - Listener Mode](ASL_GUI_1.png) 
 > 📷 *Figure 6: GUI in Listener mode — transcribed speech displayed*
 
 ---
