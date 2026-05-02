@@ -42,7 +42,7 @@ The Sign-to-Speech pipeline recognises **19 ASL signs** using MediaPipe landmark
 └──────────────────────────────────────────────────────────┘
 ```
 <img src="ASL_TopLevel.png" alt="System_Architecture" width="50%"/>
-> 📷 *Figure 1: Top level system architecture*
+> *Figure 1: Top level system architecture*
 
 ### Sign-to-Speech: Step-by-Step
 
@@ -156,7 +156,7 @@ Best NAS architecture trained for 100 epochs × 5 folds → mean val accuracy + 
 Best scheduler → final exported model.
 
 <img src="ASL_ConfMat.png" alt="Confusion Matrix" width="50%"/>
-> 📷 *Figure 2: Confusion matrix on held-out test set (19 classes)*
+> *Figure 2: Confusion matrix on held-out test set (19 classes)*
 
 ---
 
@@ -200,10 +200,10 @@ Tkinter GUI designed for touchscreen:
 - **Status bar** — confidence score, hand tracking state, current mode
 
 <img src="ASL_GUI_1.png" alt="GUI Screenshot - Speaker Mode" width="50%"/>
-> 📷 *Figure 3: GUI in Speaker mode — live skeleton overlay + detected sign*
+> *Figure 3: GUI in Speaker mode — live skeleton overlay + detected sign*
 
 <img src="ASL_GUI_1.png" alt="GUI Screenshot - Listener Mode" width="50%"/>
-> 📷 *Figure 4: GUI in Listener mode — transcribed speech displayed*
+> *Figure 4: GUI in Listener mode — transcribed speech displayed*
 
 ---
 
