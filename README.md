@@ -492,13 +492,12 @@ Realtime_ASL_RasPi/
 
 ## Team Members
 
-List of team members, affiliation, email, individual contribution:
-|---|---|
-Name					|Affiliation|		Email			|		Contribution
-1. Liz Maria George 	| *			|lizgeorge@iisc.ac.in	|Dataset collection, cleanup, feature engineering
-2. Naznin Amirul Haque	| *			|nazninhaque@iisc.ac.in	|Dataset collection, cleanup, feature engineering
-3. Ayush Kumar			| *			|ayush1@iisc.ac.in		|Top level integration, GUI development, Data collection GUI
-4. Prayanshu Sharma		| *			|prayanshus@iisc.ac.in	|Dataset collection, model development
+| Name | Affiliation | Email | Contribution |
+| :--- | :--- | :--- | :--- |
+| 1. Liz Maria George | * | lizgeorge@iisc.ac.in | Dataset collection, cleanup, feature engineering |
+| 2. Naznin Amirul Haque | * | nazninhaque@iisc.ac.in | Dataset collection, cleanup, feature engineering |
+| 3. Ayush Kumar | * | ayush1@iisc.ac.in | Top level integration, GUI development, Data collection GUI |
+| 4. Prayanshu Sharma | * | prayanshus@iisc.ac.in | Dataset collection, model development |
 
 *M.Tech. (MVLSI), ECE, IISc
 
