@@ -41,7 +41,7 @@ The Sign-to-Speech pipeline recognises **19 ASL signs** using MediaPipe landmark
 │  SHARED: Tkinter GUI │ Threaded workers │ Mode toggle    │
 └──────────────────────────────────────────────────────────┘
 ```
-![System_Architecture](ASL_TopLevel.png) 
+<img src="ASL_TopLevel.png" alt="System_Architecture" width="50%"/>
 > 📷 *Figure 1: Top level system architecture*
 
 ### Sign-to-Speech: Step-by-Step
@@ -155,8 +155,8 @@ Best NAS architecture trained for 100 epochs × 5 folds → mean val accuracy + 
 
 Best scheduler → final exported model.
 
-![Confusion Matrix](ASL_ConfMat.png) 
-> 📷 *Figure 4: Confusion matrix on held-out test set (19 classes)*
+<img src="ASL_ConfMat.png" alt="Confusion Matrix" width="50%"/>
+> 📷 *Figure 2: Confusion matrix on held-out test set (19 classes)*
 
 ---
 
@@ -199,11 +199,11 @@ Tkinter GUI designed for touchscreen:
 - **Real-time metrics** — FPS + end-to-end inference latency (ms)
 - **Status bar** — confidence score, hand tracking state, current mode
 
-![GUI Screenshot - Speaker Mode](ASL_GUI_1.png) 
-> 📷 *Figure 5: GUI in Speaker mode — live skeleton overlay + detected sign*
+<img src="ASL_GUI_1.png" alt="GUI Screenshot - Speaker Mode" width="50%"/>
+> 📷 *Figure 3: GUI in Speaker mode — live skeleton overlay + detected sign*
 
-![GUI Screenshot - Listener Mode](ASL_GUI_1.png) 
-> 📷 *Figure 6: GUI in Listener mode — transcribed speech displayed*
+<img src="ASL_GUI_1.png" alt="GUI Screenshot - Listener Mode" width="50%"/>
+> 📷 *Figure 4: GUI in Listener mode — transcribed speech displayed*
 
 ---
 
