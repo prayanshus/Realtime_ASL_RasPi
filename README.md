@@ -440,6 +440,12 @@ python3 train.py
 Copy the output `.tflite` and `sign_labels.npy` files to the `Demo_RasPi/` directory on the Pi.
 
 ---
+---
+**Running the demo:** To run the demo, execute the following script from the root directory:
+
+```bash
+python3 Demo_RasPi/pi_two_way_translator_V2.py
+```
 
 ## 15. Project Structure
 
@@ -501,12 +507,6 @@ Realtime_ASL_RasPi/
 
 *M.Tech. (MVLSI), ECE, IISc
 
----
-**Quick Start:** To run the demo, execute the following script from the root directory:
-
-```bash
-python3 Demo_RasPi/pi_two_way_translator_V2.py
-```
 
 ## Video Presentation
 
