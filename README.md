@@ -2,7 +2,7 @@
 
 A proof-of-concept wearable system that enables two-way communication between ASL (American Sign Language) users and non-signers. The system runs entirely on a Raspberry Pi 5 and supports two modes: **Sign-to-Speech** (camera captures signs → CNN classifies → audio output) and **Speech-to-Text** (microphone captures speech → speech recognition transcribes → text on display).
 
-> **Course:** Edge AI (2026)
+> **Course:** Edge AI (2026) https://www.samy101.com/edge-ai-26/
 
 ---
 
