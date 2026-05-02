@@ -502,6 +502,11 @@ Realtime_ASL_RasPi/
 *M.Tech. (MVLSI), ECE, IISc
 
 ---
+**Quick Start:** To run the demo, execute the following script from the root directory:
+
+```bash
+python3 Demo_RasPi/pi_two_way_translator_V2.py
+```
 
 ## Video Presentation
 
